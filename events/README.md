@@ -16,19 +16,54 @@ mouse moves, when keys are pressed, and when forms are submitted.
 
 - Use `.addEventListener` to listen for the `click` event on the
 `<button>`.
+
+// ANSWER ::
+
+var thing = document.querySelector("#clicker");
+
 - Pop up an `alert()` whenever such a click occurs.
+
+// ANSWER ::
+
+thing.addEventListener("click", function (event) {
+  alert("Wuut, you clicked me!");
+});
 
 ## Part 2
 
 - Change the `backgroundColor` of the box to `yellow` when the mouse
   is over it.
+
+// ANSWER ::
+var box = document.querySelector("#mouser");
+
+box.addEventListener("mouseover", function (event) {
+  event.target.style.backgroundColor = "yellow";
+});
+
 - Change back to `green` when the mouse leaves the box.
 - The `mouseover` and `mouseout` events may be of use.
+
+// ANSWER ::
+box.addEventListener("mouseout", function (event) {
+  event.target.style.backgroundColor = "green";
+});
 
 ## Part 3
 
 - Add a `submit` event to the `<form>` element.
+
+// ANSWER ::
+var thing = document.querySelector("#former");
+
 - `alert()` the text that is typed into the text field.
+
+// ANSWER ::
+
+thing.addEventListener("submit", function (event) {
+  alert("Wuut, you clicked me!");
+});
+
 - Notice that the page refreshes (see the URL bar).
 
 ## Part 4
